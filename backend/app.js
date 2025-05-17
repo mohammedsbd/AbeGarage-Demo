@@ -1,18 +1,20 @@
 // import express module
-
 const express = require('express');
+// invoke the expresss application
 const app = express();
-//import mysql module
+//import mysql module mysql2
 const mysql = require('mysql2');
 // define the connection parameter for the database
 
-const pool = mysql.createPool({
+const dbConfig = {
   connectionLimit: 10,
   password: "demoapp",
   user: "demoapp",
   host: "localhost",
   database: "demoapp",
-});
+};
+
+const pool = mysql.createPool(dbConfig);
 
 
 // create connection
@@ -24,14 +26,6 @@ pool.getConnection((err, connection) => {
   console.log("Connected to the database!");
   connection.release(); // Release it back to the pool
 });
-
-
-
-
-
-
-
-
 // create a get request to the root path
 app.get('/', (req, res) => {
     res.send('Hello World!');
