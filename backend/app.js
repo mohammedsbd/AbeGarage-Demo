@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 
-//add employee handler
+//add employee handler to the add employee path
 app.post("/add_employee", (req, res) => {
   // Destructure data from the request body
   const { first_name, last_name, email, password } = req.body;
@@ -34,7 +34,7 @@ app.post("/add_employee", (req, res) => {
 
   // SQL query to insert data using placeholders
   const sql = `INSERT INTO employee_test (first_name, last_name, email, password) 
-               VALUES (?, ?, ?, ?)`;
+              VALUES (?, ?, ?, ?)`;
 
   // Execute the query with parameters
   pool.query(sql, [first_name, last_name, email, password], (err, result) => {
