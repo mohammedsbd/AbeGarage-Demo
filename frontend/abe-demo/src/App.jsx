@@ -1,6 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import the router from react-router
+import { Routes, Route } from 'react-router' 
+//import the pages components
+import Home from './pages/Home'
+import Login from './pages/Login'
+import AddEmployee from './pages/AddEmployee'
 import './App.css'
 
 function App() {

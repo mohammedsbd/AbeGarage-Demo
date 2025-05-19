@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
-    "mysql2": "^3.14.1"
+    "mysql2": "^3.14.1",
+    "react-router": "^7.6.0",
+    "react-router-dom": "^7.6.0"
   }
 }
