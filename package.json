@@ -1,0 +1,16 @@
+{
+  "name": "abegarage-demo",
+  "version": "1.0.0",
+  "description": "This is the first version of the abe garage web app that focuses on authntication and query handling",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
+}
