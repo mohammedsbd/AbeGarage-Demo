@@ -24,7 +24,17 @@ pool.getConnection((err, connection) => {
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
+//Allow CORS to all
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+ 
+ 
+ 
+   // Pass to next layer of middleware
+   next();
+ })
 
 //add employee handler to the add employee path
 app.post("/add_employee", (req, res) => {
@@ -80,6 +90,8 @@ app.post("/login", (req, res) => {
     }
   });
 });
+
+
 
  
 
